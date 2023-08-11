@@ -10,16 +10,12 @@ import {
   INIT_CHECKOUT_MUTATION,
 } from "../../graphql";
 
-import { Link } from "react-router-dom";
-
 function ProductList() {
   const { loading, error, data } = useQuery(PRODUCT_LIST_QUERY);
   const [addToCart] = useMutation(ADD_TO_CART_MUTATION);
   const [initCheckout] = useMutation(INIT_CHECKOUT_MUTATION);
   const [checkoutToken, setCheckoutToken] = useState(null);
   const [token, setToken] = useLocalStorage("token");
-
-  // const productUrl = import.meta.env.VITE_PRODUCT_URL;
 
   const initializeCheckout = async (userEmail) => {
     try {
@@ -53,7 +49,7 @@ function ProductList() {
     try {
       const result = await addToCart({
         variables: {
-          checkoutToken: checkoutToken, // You should fetch and use the user's checkout token here
+          checkoutToken: checkoutToken,
           variantId: variantId,
           quantity: 1,
         },
@@ -74,15 +70,15 @@ function ProductList() {
   };
 
   const openCart = () => {
-    window.location.href = "/cart";
+    window.location.href = `${import.meta.env.VITE_FRONTEND_URL}/cart`;
   };
 
   return (
     <div>
       <div className="cart-button-container">
-        
-          <button className="cart-button" onClick={openCart}>Cart</button>
-        
+        <button className="cart-button" onClick={openCart}>
+          Cart
+        </button>
       </div>
       <div className="product-list">
         {data.products.edges.map(({ node: product }) => (
@@ -91,27 +87,14 @@ function ProductList() {
             <p>{product.name}</p>
             <p>Price: Rs {product.pricing.priceRange.start.net.amount}</p>
             <button
-              // className="snipcart-add-item"
               onClick={() =>
                 handleAddToCart(product.id, product.variants[0].id)
               }
             >
               Add to cart
             </button>
-            {/* <button
-            className="snipcart-add-item"
-            data-item-id={product.id}
-            data-item-name={product.name}
-            data-item-price={product.pricing.priceRange.start.net.amount} 
-            data-item-image={product.thumbnail.url}
-            data-item-url={`${productUrl}${product.id}`}
-            onClick={() => handleAddToCart(product.id)}
-          >
-            Add to cart
-          </button> */}
           </div>
         ))}
-        {/* <ToastContainer /> */}
       </div>
     </div>
   );

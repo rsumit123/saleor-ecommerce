@@ -5,22 +5,14 @@ import { useLocalStorage } from "react-use";
 import GET_CART_ITEMS from "../../graphql/queries/getCartItems";
 
 import "./CartPage.css";
-import StripeModal from "../StripeModal/StripeModal";
 import { Link } from "react-router-dom";
 
 function CartPage() {
   const [token] = useLocalStorage("token");
-  
-
-  // const [cartTotal, setCartTotal] = useLocalStorage("cartTotalAmount");
-
-  
 
   const { loading, error, data } = useQuery(GET_CART_ITEMS, {
     variables: { token: token },
   });
-
-  // const [isModalOpen, setModalOpen] = useState(false);
 
   if (loading) return <p>Loading Cart...</p>;
   if (error) return <p>Error: {error.message}</p>;
@@ -31,12 +23,9 @@ function CartPage() {
       total + line.quantity * line.variant.pricing.price.net.amount,
     0
   );
-  // setCartTotal(totalAmount);
 
   localStorage.setItem("cartTotalAmount", totalAmount);
   const currency = data.checkout.lines[0]?.variant.pricing.price.net.currency;
-
-  
 
   return (
     <div className="center-content">
@@ -66,7 +55,6 @@ function CartPage() {
         <Link to="/checkout">
           <button className="checkout-button">Checkout</button>
         </Link>
-        {/* <button onClick={handleCheckoutClick}>Checkout</button> */}
       </div>
     </div>
   );
