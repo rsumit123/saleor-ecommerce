@@ -37,7 +37,7 @@ This project utilizes:
 
 
 
-	`git clone <repository-url>` 
+	`git clone git@github.com:rsumit123/saleor-ecommerce.git` 
 
 2.  Install dependencies.
 
@@ -45,22 +45,22 @@ This project utilizes:
 
 	```
 	cd saleor-ecommerce
-	 npm install
+	npm install
 	 ```
 
 3.  Create a `.env` file in the root directory and add your Contentful, Saleor and Stripe credentials:
 
 	```
-
-			VITE_SALEOR_GRAPHQL_URL=<saleor-graphql-url>
-			VITE_FRONTEND_URL=<frontend-url>
-            VITE_STRIPE_PUB_KEY=<stripe-key>
-            VITE_DELIVERY_METHOD_ID=<delivery-method-id>
-            VITE_CONTENTFUL_SPACE_ID=<contentful-space-id>
-            VITE_CONTENTFUL_DELIVERY_TOKEN=<delivery-token>
-            VITE_CONTENTFUL_HEADER_ENTRY_ID=<entryid-for-header>
-            VITE_CONTENTFUL_FOOTER_ENTRY_ID=<entryid-for-footer>
-            VITE_CONTENTFUL_GRAPHQL_API=<contentful-graphql-url>
+        VITE_SALEOR_GRAPHQL_URL=<saleor-graphql-url>
+        VITE_FRONTEND_URL=<frontend-url>
+        VITE_STRIPE_PUB_KEY=<stripe-key>
+        VITE_DELIVERY_METHOD_ID=<delivery-method-id>
+        VITE_CONTENTFUL_SPACE_ID=<contentful-space-id>
+        VITE_CONTENTFUL_DELIVERY_TOKEN=<delivery-token>
+        VITE_CONTENTFUL_HEADER_ENTRY_ID=<entryid-for-header>
+        VITE_CONTENTFUL_FOOTER_ENTRY_ID=<entryid-for-footer>
+        VITE_CONTENTFUL_GRAPHQL_API=<contentful-graphql-url>
+    ```
 4.  Run the application.
 	```
 	npm run dev
