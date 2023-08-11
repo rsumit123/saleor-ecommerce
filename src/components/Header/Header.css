@@ -1,0 +1,47 @@
+.header-container {
+    display: flex;
+    align-items: center;
+    padding: 10px 30px;
+    border-bottom: 1px solid #ddd;
+    background-color: #f4f4f4;
+    position: relative; /* This is needed for the title positioning */
+}
+
+.header-logo {
+    width: 150px;  /* Adjust based on your logo's preferred size */
+    height: 50px; /* Adjust based on your logo's preferred size */
+}
+.header-title {
+    font-size: 24px;
+    color: #333;
+    position: absolute; /* Absolute positioning relative to the header container */
+    left: 50%; /* Move it to the center */
+    transform: translateX(-50%); /* Adjusts the title's position to truly center it */
+}
+
+
+@media (max-width: 768px) {
+    .header-logo {
+        width: 100px; /* Decrease the size of the logo */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .header-title {
+        font-size: 20px; /* Adjust the font size to a smaller value */
+        top: 70px; /* Push the title below the logo */
+        left: 45%; /* Center the title */
+        transform: translateX(-50%); /* Adjust the title's position */
+        position: absolute; /* Override the default flexbox layout to position the title */
+        color: #f4f4f4;
+    }
+
+    .header-container {
+        flex-direction: column; /* Stack the logo and title vertically */
+        align-items: center; /* Center the items */
+    }
+}
+
+
+
+
+

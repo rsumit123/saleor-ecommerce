@@ -1,0 +1,63 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 500px;
+  position: relative; /* this will help the close button position relative to this container */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); /* optional: gives a raised effect */
+}
+
+.close-modal {
+  border: none;
+  background: white;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 20px; /* make the close button slightly bigger */
+  color: #333;
+}
+
+.card-buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* Style the Pay button for better visibility */
+form button {
+  display: block;
+  background-color: #32325d;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  margin-top: 20px; /* space between PaymentElement and this button */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #43458b;
+}
+
+form button:disabled {
+  background-color: #bbb;
+  cursor: not-allowed;
+}
+
+/* If you experience issues with the visibility of the Stripe Payment Element, you can add styles to target it directly. For now, I'll keep it minimal. */

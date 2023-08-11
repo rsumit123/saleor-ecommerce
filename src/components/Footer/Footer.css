@@ -1,0 +1,13 @@
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    background-color: #f4f4f4; /* Consistent with the header background color */
+    border-top: 1px solid #ddd; /* A light border, consistent with the above theme */
+}
+
+.footer-text {
+    font-size: 16px;
+    color: #333; /* Dark text color consistent with the theme */
+}
