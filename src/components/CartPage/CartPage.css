@@ -55,29 +55,6 @@
     margin-bottom: 0;
     border-bottom: none;
   }
-
-  /* .StripeElement {
-    box-sizing: border-box;
-    height: 40px;
-    padding: 10px 12px;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    background-color: white;
-    box-shadow: 0 1px 3px 0 #e6ebf1;
-    transition: box-shadow 150ms ease;
-  }
-  
-  .StripeElement--focus {
-    box-shadow: 0 1px 3px 0 #cfd7df;
-  }
-  
-  .StripeElement--invalid {
-    border-color: #fa755a;
-  }
-  
-  .StripeElement--webkit-autofill {
-    background-color: #fefde5 !important;
-  } */
   
   
   @media (max-width: 768px) {
@@ -106,4 +83,30 @@
     display: block;
     margin: 0 auto;
     padding: 10px 20px;
+}
+
+
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.quantity-control button {
+  background-color: #f4f4f4;
+  color: black;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 3px;
+  margin: 0 5px;
+  transition: background-color 0.3s ease;
+
+  /* If you want to make the buttons a bit fancy */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.quantity-control button:hover {
+  background-color: #e0e0e0;
 }

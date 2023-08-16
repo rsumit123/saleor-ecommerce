@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useQuery, gql, useMutation } from "@apollo/client";
+import { useQuery, useMutation } from "@apollo/client";
 import "./ProductList.css";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -29,21 +29,31 @@ function ProductList() {
       const checkoutToken = result.data.checkoutCreate.checkout.token;
       setCheckoutToken(checkoutToken);
       setToken(checkoutToken);
-      // Store this token in a state or context to be used when adding products to cart
+      // Storing this token in state and localStorage
     } catch (error) {
       console.error("Error initializing checkout:", error);
     }
   };
 
   useEffect(() => {
-    const userEmail = "rsumit123@gmail.com";
+    const userEmail = "rsumit123@gmail.com"; //default checkout email is overridden later
     initializeCheckout(userEmail);
   }, []);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :</p>;
 
+  const restoreData = () => {
+    // Clear data from localStorage
+
+    localStorage.removeItem("cartTotalAmount");
+    localStorage.removeItem("checkoutId");
+    localStorage.removeItem("token");
+  };
+
   const handleAddToCart = async (productId, variantId) => {
+    // Adding products to saleor cart
+
     console.log("productId", productId);
     console.log("variantId", variantId);
     try {
@@ -59,12 +69,14 @@ function ProductList() {
         toast.success("Successfully added to cart");
       } else {
         console.log("Error adding to cart", result);
+        restoreData();
         toast.error(
           "Error adding to cart: ",
           result.data.checkoutLinesAdd.errors[0].message
         );
       }
     } catch (error) {
+      restoreData();
       console.error("Error adding to cart:", error);
     }
   };

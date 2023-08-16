@@ -2,8 +2,7 @@ import React from "react";
 import {
   Elements,
   useStripe,
-  useElements,
-  CardElement,
+  useElements
 } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import "./StripeModal.css";

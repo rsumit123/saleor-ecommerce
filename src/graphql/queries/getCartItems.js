@@ -5,6 +5,7 @@ query Get_Cart_Items($token: UUID!) {
   checkout(token: $token) {
     lines {
       variant {
+        id
         product {
           thumbnail {
             url
