@@ -84,3 +84,29 @@
     margin: 0 auto;
     padding: 10px 20px;
 }
+
+
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.quantity-control button {
+  background-color: #f4f4f4;
+  color: black;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 3px;
+  margin: 0 5px;
+  transition: background-color 0.3s ease;
+
+  /* If you want to make the buttons a bit fancy */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.quantity-control button:hover {
+  background-color: #e0e0e0;
+}

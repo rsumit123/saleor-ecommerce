@@ -23,7 +23,9 @@ function Header() {
 
   return (
     <div className="header-container">
+      <a href={import.meta.env.VITE_FRONTEND_URL}>
       <img src={page.logo.url} alt="Logo" className="header-logo" />
+      </a>
       <h1 className="header-title">{page.title}</h1>
     </div>
   );
