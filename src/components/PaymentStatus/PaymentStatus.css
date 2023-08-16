@@ -1,77 +1,77 @@
 .payment-status-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px 20px;
-    box-sizing: border-box;
-    max-width: 600px;
-    margin: 50px auto;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    background-color: #fff;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  max-width: 600px;
+  margin: 50px auto;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .payment-status-message {
-    font-size: 1.2em;
-    color: #333;
-    margin: 20px 0;
+  font-size: 1.2em;
+  color: #333;
+  margin: 20px 0;
 }
 
 .order-details {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    box-sizing: border-box;
-    border-top: 1px solid #ddd;
-    padding-top: 20px;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+  text-align: center;
 }
 
 .order-details-title {
-    font-weight: bold;
-    color: #007BFF;
-    margin-bottom: 20px;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 20px;
 }
 
 .order-item {
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
 
 .order-item-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    color: black
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: black;
 }
 
-.order-item-header label{
-    font-weight: bold;
+.order-item-header label {
+  font-weight: bold;
 }
-.total-price{
-    color: black;
+.total-price {
+  color: black;
 }
 .return-home-btn {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    align-self: center;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: center;
 }
 
 .return-home-btn:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 @media (max-width: 768px) {
-    .payment-status-container {
-        width: 90%;
-    }
+  .payment-status-container {
+    width: 90%;
+  }
 }

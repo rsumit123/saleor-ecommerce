@@ -8,14 +8,14 @@
 }
 
 .header-logo {
-    width: 150px;  /* Adjust based on your logo's preferred size */
-    height: 50px; /* Adjust based on your logo's preferred size */
+    width: 150px;  
+    height: 50px; 
 }
 .header-title {
     font-size: 24px;
     color: #333;
     position: absolute; /* Absolute positioning relative to the header container */
-    left: 50%; /* Move it to the center */
+    left: 50%; /* Moving it to the center */
     transform: translateX(-50%); /* Adjusts the title's position to truly center it */
 }
 

@@ -32,7 +32,6 @@ function Checkout() {
 
   const [token] = useLocalStorage("token");
   const [checkoutId, setCheckoutId] = useLocalStorage("checkoutId");
-  //   const [cartTotal] = useLocalStorage("cartTotalAmount");
   const cartTotal = localStorage.getItem("cartTotalAmount");
 
   const totalAmount = parseFloat(cartTotal) + 50; // Add shipping cost

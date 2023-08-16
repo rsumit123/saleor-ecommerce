@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
-import { useQuery, gql, useMutation } from "@apollo/client";
+import { useQuery } from "@apollo/client";
 import { useLocalStorage } from "react-use";
 import GET_CART_ITEMS from "../../graphql/queries/getCartItems";
 
