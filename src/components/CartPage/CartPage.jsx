@@ -29,7 +29,7 @@ function CartPage() {
     variables: { token: token },
   });
 
-  const handleIncrement = async (variantId, currentQuantity, increment) => {
+  const handleQuantityChange = async (variantId, currentQuantity, increment) => {
     console.log("Increment quantity of variantId: ", variantId);
     try {
       const newQuantity = increment ? currentQuantity + 1 : currentQuantity - 1;
@@ -87,7 +87,7 @@ function CartPage() {
               <div className="quantity-control">
                 <button
                   onClick={() =>
-                    handleIncrement(line.variant.id, line.quantity, false)
+                    handleQuantityChange(line.variant.id, line.quantity, false)
                   }
                 >
                   -
@@ -95,7 +95,7 @@ function CartPage() {
                 <span>Quantity: {line.quantity}</span>
                 <button
                   onClick={() =>
-                    handleIncrement(line.variant.id, line.quantity, true)
+                    handleQuantityChange(line.variant.id, line.quantity, true)
                   }
                 >
                   +
