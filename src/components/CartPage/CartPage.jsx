@@ -36,7 +36,7 @@ function CartPage() {
             <li className="cart-item" key={index}>
               <img
                 src={
-                  line.variant.product.thumbnail?.url || "default_image_url.jpg"
+                  line.variant.product.thumbnail?.url || "https://i.imgur.com/krctF5J.png"
                 }
                 alt={line.variant.product.name}
               />
