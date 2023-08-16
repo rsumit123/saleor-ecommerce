@@ -6,10 +6,12 @@ This React application powered by Vite offers a seamless e-commerce experience b
 ## Table of Contents
 
 1.  [Description](#description)
-2.  [Setup & Installation](#setup--installation)
-3.  [Features](#features)
-4.  [Contributing](#contributing)
-5.  [License](#license)
+2.  [Project Structure](#project-structure)
+3.  [Setup & Installation](#setup--installation)
+4.  [Features](#features)
+5.  [Deployment](#deployment)
+5.  [Contributing](#contributing)
+6.  [License](#license)
 
 ## Description
 
@@ -21,6 +23,24 @@ This project utilizes:
 -   **Contentful** for fetching static content for the Header and Footer.
 -   **Klaviyo** for sending order confirmation emails
 -   **Stripe** for secure payment integration.
+
+
+## Project Structure
+
+This project follows a modular structure, ensuring clarity and ease of access:
+
+-   **Components**: All the UI components are stored under the `components` directory. Each component has its own dedicated directory.
+    
+    -   **Styles**: Each component's styles are maintained in a CSS file within the same directory as the component. This ensures styles are closely associated with their respective components.
+-   **GraphQL**:
+    
+    -   The `src/graphql` directory contains all the GraphQL queries and mutations.
+        -   `queries`: This sub-directory contains all the GraphQL queries.
+        -   `mutations`: This sub-directory contains all the GraphQL mutations.
+
+By following this structure,  a clear distinction and easy navigation through different parts of the project was ensured, enhancing the developer experience.
+
+
 
 ## Setup & Installation
 
@@ -71,9 +91,27 @@ This project utilizes:
 
 1.  **Product List Page:** Display a list of products fetched dynamically from Saleor.
 2.  **Cart Functionality:** Add products to the cart and view your selected items.
+3.  **Update Cart Quantity:** Increment or decrement quantity of items in the cart 
 3.  **Checkout:** Seamlessly check out your cart items.
 4.  **Payment Integration:** Securely process payments using Stripe, integrated through Saleor.
 5.  **Confirmation Emails** Sending order confirmation emails via Klaviyo
+
+## Deployment
+
+This project is currently deployed and live on Vercel.
+
+[Live Demo Link](https://sumit-saleor-ecommerce.vercel.app/)
+
+To deploy this project on Vercel:
+
+1.  Push your code to a GitHub repository.
+2.  Log into [Vercel](https://vercel.com/) and click on "New Project."
+3.  Link the GitHub repository.
+4.  Add necessary environment variables as mentioned in the [Setup & Installation](#setup--installation) section.
+5.  Click "Deploy" and Vercel will automatically handle the rest.
+
+
+
 
 ## Contributing
 
